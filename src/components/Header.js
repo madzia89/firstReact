@@ -8,6 +8,8 @@ const styles = {
     }
 
 }
+
+//style poniżej sprawdzają czy dany header nine ma przypadkiem określonego header isRed = {false} jeżeli nie ma false wówczas bierze rzeczy z powyższej zmiennej styles i dodatkowo dodaje color red. Jeżeli ma false wówczas nie dodaje coloru red tylko bierze do stylów tylko rzeczy ze zmiennej style
 const Header = (props) => (
 
     <h1 style={
