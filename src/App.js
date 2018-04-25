@@ -9,7 +9,7 @@ const App = () => (
         <MyfirstComponent name="SomeName" />
         <Add numberA={5} numberB={10}/>
         <Add numberA={565} numberB={121}/>
-        <Header text={"A Ala ma kota"} />
+        <Header text={"A Ala ma kota"} isRed={false}/>
     </div>
 )
 export default App
