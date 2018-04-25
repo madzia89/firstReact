@@ -2,6 +2,7 @@ import React from 'react'
 import MyfirstComponent from './components/MyFirstComponent'
 import Add from './components/Add'
 import MappingArray from './components/MappingArray'
+import MappingArrayTwo from './components/MappingArrayTwo'
 import Header from './components/Header'
 
 //poniższe propsy są przekazywane do "funkcji" którą tutaj importujemy
@@ -13,6 +14,9 @@ const App = () => (
         <Header text={"A Ala ma kota"} isRed={false}/>
         <hr/>
         <MappingArray />
+        <hr/>
+        <MappingArrayTwo />
     </div>
+
 )
 export default App
