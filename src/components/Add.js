@@ -6,7 +6,7 @@ import Header from './Header'
 //to można zapisać tak jak poniżej: const Add = (props) => (
 const Add = ({numberA, numberB}) =>(
     <div>
-        Suma {numberA} i {numberB} jest równa {numberA + numberB}
+        Suma {numberA} i {numberB} jest równa
         <Header text= {numberA + numberB} />
     </div>
 )
