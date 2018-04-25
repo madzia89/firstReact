@@ -3,7 +3,11 @@ import React from 'react'
 const Header = (props) => (
 
     <h1
-    style
+    style = {{
+        color: 'red',
+        display: 'inline',
+        margin: 0
+    }}
     >
         {props.text}
 
