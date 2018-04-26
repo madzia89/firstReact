@@ -1,10 +1,12 @@
 import React from 'react'
 
-{/*count jests nazwą właściwości, count równa się zero bo od tej liczby zaczynamy odliczanie
-
-Component się zmieni zawsze gdy zmieni się stan dlatego stan nie może ybć zmieniany bezpośrednio
-this.setState zostanie połączone ze state = {count: ...}*/
-}
+// {/*count jests nazwą właściwości, count równa się zero bo od tej liczby zaczynamy odliczanie
+//
+// Component się zmieni zawsze gdy zmieni się stan dlatego stan nie może ybć zmieniany bezpośrednio
+// this.setState zostanie połączone ze state = {count: ...}
+// Funkcje tutaj są właściwościami component i dzięki temu że są zapisane nad renderem, nie są wywołaywane z każdym renderem
+// */
+// }
 
 class CounterWithState extends React.Component {
     state = {
