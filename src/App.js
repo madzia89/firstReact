@@ -9,9 +9,7 @@ import CounterWithState from './components/CounterWithState'
 import Dashboard from "./components/Dashboard"
 import Hello from './components/Hello'
 import AppBar from 'material-ui/AppBar'
-import Drawer from 'material-ui/Drawer'
-import RaisedButton from 'material-ui/RaisedButton'
-import MenuItem from 'material-ui/MenuItem'
+import Sidebar from './components/Sidebar'
 
 //exact
 class App extends React.Component {
@@ -23,7 +21,6 @@ class App extends React.Component {
         isDrawerOpen: !this.state.isDrawerOpen
     })
 
-
     render() {
         return (
             <div>
@@ -33,27 +30,10 @@ class App extends React.Component {
                 />
                 <Router>
                     <div>
-
-                        <Drawer
-                            docked={false}
-                            onRequestChange={this.drawerBtnClickHandler}
-                            open={this.state.isDrawerOpen}
-                        >
-                            <RaisedButton
-                                label="Close Menu"
-                                onClick={this.drawerBtnClickHandler}
-                            />
-
-                            <Link to={'/Hello/Magda'}><MenuItem>Hello </MenuItem></Link>
-                            <Link to={'/mapping-array'}><MenuItem>MappingArray </MenuItem></Link>
-                            <Link to={'/mapping-array-two'}><MenuItem>MappingArrayTwo </MenuItem></Link>
-                            <Link to={'/counter-with-state'}><MenuItem>CounterWithState </MenuItem></Link>
-                            <Link to={'/my-first-component'}><MenuItem>MyfirstComponent </MenuItem></Link>
-                            <Link to={'/add-a'}><MenuItem>AddFirst </MenuItem></Link>
-                            <Link to={'/add-b'}><MenuItem>AddSecond </MenuItem></Link>
-                            <Link to={'/header'}><MenuItem>header </MenuItem></Link>
-                        </Drawer>
-
+                        <Sidebar
+                            isDrawerOpen={this.state.isDrawerOpen}
+                            drawerBtnClickHandler={this.drawerBtnClickHandler}
+                        />
 
                         <Route exact path={'/'} component={Dashboard}/>
                         <Route path={'/hello/:name'} component={Hello}/>
