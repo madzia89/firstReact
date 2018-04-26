@@ -7,6 +7,7 @@ import MappingArrayTwo from './components/MappingArrayTwo'
 import Header from './components/Header'
 import CounterWithState from "./components/CounterWithState"
 import Dashboard from "./components/Dashboard"
+import Hello from "./components/Hello"
 
 //exact
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
         <Router>
             <div>
                 <Link to={'/'}>Home </Link>
+                <Link to={'/Hello/Magda'}>Hello </Link>
                 <Link to={'/mapping-array'}>MappingArray </Link>
                 <Link to={'/mapping-array-two'}>MappingArrayTwo </Link>
                 <Link to={'/counter-with-state'}>CounterWithState </Link>
@@ -24,6 +26,7 @@ const App = () => (
 
                 <hr/>
                 <Route exact path={'/'} component={Dashboard}/>
+                <Route path={'/hello/:name'} component={Hello}/>
                 <Route path={'/mapping-array'} component={MappingArray}/>
                 <Route path={'/mapping-array-two'} component={MappingArrayTwo}/>
                 <Route path={'/counter-with-state'} component={CounterWithState}/>
