@@ -1,4 +1,5 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
 
 // {/*count jests nazwą właściwości, count równa się zero bo od tej liczby zaczynamy odliczanie
 //
@@ -8,6 +9,11 @@ import React from 'react'
 // */
 // }
 
+const styles = {
+    btn: {
+        margin: "10px"
+    }
+}
 class CounterWithState extends React.Component {
     state = {
         count: 0
@@ -30,8 +36,18 @@ class CounterWithState extends React.Component {
             <div>
                 <h1>{this.state.count}</h1>
                 <div>
-                    <button onClick={this.funkcjaZmieniajacaStanButtonMinus}> -</button>
-                    <button onClick={this.funkcjaZmieniajacaStanButtonPlus}> +</button>
+                    <RaisedButton
+                        label={"-"}
+                        primary={true}
+                        onClick={this.funkcjaZmieniajacaStanButtonMinus}
+                        style={styles.btn}
+                    />
+                    <RaisedButton
+                        label={"+"}
+                        secondary={true}
+                        onClick={this.funkcjaZmieniajacaStanButtonPlus}
+                        style={styles.btn}
+                    />
                 </div>
             </div>
         )
