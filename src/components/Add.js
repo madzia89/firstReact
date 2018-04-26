@@ -4,10 +4,14 @@ import Header from './Header'
 //w divie jest działane które pobiera propsy z addp.js i wstawia je w działania, efekt tego działania widzimy w app.js
 
 //to można zapisać tak jak poniżej: const Add = (props) => (
-const Add = ({numberA, numberB}) =>(
-    <div>
-        Suma {numberA} i {numberB} jest równa
-        <Header text= {numberA + numberB} isRed={true} />
-    </div>
-)
+class Add extends React.Component {
+   render() {
+       return(
+        <div>
+            Suma {this.props.numberA} i {this.props.numberB} jest równa
+            <Header text={this.props.numberA + this.props.numberB} isRed={true}/>
+        </div>
+       )
+    }
+}
 export default Add
