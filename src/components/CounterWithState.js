@@ -11,26 +11,25 @@ class CounterWithState extends React.Component {
         count: 0
 
     }
+    funkcjaZmieniajacaStanButtonMinus = () => {
+        this.setState({
+            count: this.state.count - 1
+        })
+    }
+    funkcjaZmieniajacaStanButtonPlus = () => {
+        this.setState({
+            count: this.state.count + 1
+        })
+    }
 
     render() {
-        const funkcjaZmieniajacaStanButtonMinus = () => {
-            this.setState({
-                count: this.state.count -1
-            })
 
-        }
-        const funkcjaZmieniajacaStanButtonPlus = () => {
-            this.setState({
-                count: this.state.count + 1
-            })
-        }
-        
         return (
             <div>
                 <h1>{this.state.count}</h1>
                 <div>
-                    <button onClick={funkcjaZmieniajacaStanButtonMinus}> -</button>
-                    <button onClick={funkcjaZmieniajacaStanButtonPlus}> +</button>
+                    <button onClick={this.funkcjaZmieniajacaStanButtonMinus}> -</button>
+                    <button onClick={this.funkcjaZmieniajacaStanButtonPlus}> +</button>
                 </div>
             </div>
         )
