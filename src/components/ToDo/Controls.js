@@ -10,7 +10,7 @@ const styles = {
     }
 }
 
-const Controls = ({onChangeHandler, newTaskValue}) => (
+const Controls = ({onClickHandler, onChangeHandler, newTaskValue}) => (
     <Paper style={styles.paper}>
         <TextField
             onChange={onChangeHandler}
@@ -19,6 +19,7 @@ const Controls = ({onChangeHandler, newTaskValue}) => (
             placeholder={'New Task'}
             fullWidth={true}/>
         <RaisedButton
+            onClick={onClickHandler}
             primary={true}
             fullWidth={true}
             label={'ADD'}

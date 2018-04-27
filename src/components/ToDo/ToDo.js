@@ -20,6 +20,17 @@ class ToDo extends React.Component {
         })
     }
 
+    addTask = () => {
+        const newTask = {
+            name: this.state.newTask,
+            uid: Date.now()
+        }
+        const newTasks = this.state.tasks.concat(newTask)
+        this.setState({
+            tasks: newTasks
+        })
+    }
+
     newTaskChangeHandler = (event, newValue) => {
         this.setState({
             newTask: newValue
@@ -30,8 +41,10 @@ class ToDo extends React.Component {
         return (
             <div>
                 <Controls
+                    onClickHandler={this.addTask}
                     onChangeHandler={this.newTaskChangeHandler}
                     newTaskValue={this.state.newTask}
+
                 />
                 <List
                     deleteTaskFunction={this.deleteTask}
