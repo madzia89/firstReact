@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard"
 import Hello from './components/Hello'
 import AppBar from 'material-ui/AppBar'
 import Sidebar from './components/Sidebar'
+import ToDo from './components/ToDo'
 
 //exact
 class App extends React.Component {
@@ -36,6 +37,7 @@ class App extends React.Component {
                         />
 
                         <Route exact path={'/'} component={Dashboard}/>
+                        <Route path={'/todo'} component={ToDo}/>
                         <Route path={'/hello/:name'} component={Hello}/>
                         <Route path={'/mapping-array'} component={MappingArray}/>
                         <Route path={'/mapping-array-two'} component={MappingArrayTwo}/>
@@ -52,6 +54,7 @@ class App extends React.Component {
                         <Route path={'/header'} render={() => (
                             <Header text={"A Ala ma kota"} isRed={false}/>
                         )}/>
+
 
                     </div>
                 </Router>

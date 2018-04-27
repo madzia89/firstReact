@@ -23,6 +23,12 @@ const Sidebar = (props) => (
             </MenuItem>
         </Link>
 
+        <Link to={'/todo'}>
+            <MenuItem onClick={props.drawerBtnClickHandler}>
+                ToDoList
+            </MenuItem>
+        </Link>
+
         <Link to={'/mapping-array'}>
             <MenuItem onClick={props.drawerBtnClickHandler}>
                 MappingArray
