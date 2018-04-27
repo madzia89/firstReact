@@ -14,7 +14,7 @@ const Sidebar = (props) => (
 
         <RaisedButton
             label="Close Menu"
-            onClick={this.drawerBtnClickHandler}
+            onClick={props.drawerBtnClickHandler}
         />
 
         <Link to={'/Hello/Magda'}>
@@ -63,7 +63,7 @@ const Sidebar = (props) => (
                 header
             </MenuItem>
         </Link>
-        
+
     </Drawer>
 
 )

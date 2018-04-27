@@ -14,24 +14,47 @@ const styles = {
         margin: "10px"
     }
 }
-class CounterWithState extends React.Component {
-    state = {
-        count: 0
 
+class CounterWithState extends React.Component {
+    constructor() {
+        super()
+        console.log('counter component is created')
+        this.state = {
+            count: 0
+        }
+        this.funkcjaZmieniajacaStanButtonMinus = () => {
+            this.setState({
+                count: this.state.count - 1
+            })
+        }
+        this.funkcjaZmieniajacaStanButtonPlus = () => {
+            this.setState({
+                count: this.state.count + 1
+            })
+        }
     }
-    funkcjaZmieniajacaStanButtonMinus = () => {
-        this.setState({
-            count: this.state.count - 1
-        })
+
+    componentWillMount() {
+        console.log('component will mount')
     }
-    funkcjaZmieniajacaStanButtonPlus = () => {
-        this.setState({
-            count: this.state.count + 1
-        })
+
+    componentDidMount() {
+        console.log('counter is mounted')
+    }
+
+    componentWillUnmount() {
+        console.log('component will unmount')
+    }
+
+    componentWillUpdate(){
+        console.log('component will update')
+    }
+    componentDidUpdate(){
+        console.log('component did update')
     }
 
     render() {
-
+        console.log('rendering')
         return (
             <div>
                 <h1>{this.state.count}</h1>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import MyfirstComponent from './components/MyFirstComponent'
 import Add from './components/Add'
 import MappingArray from './components/MappingArray'
