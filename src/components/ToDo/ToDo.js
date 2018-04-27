@@ -1,6 +1,7 @@
 import React from 'react'
 import List from './List'
 import Controls from './Controls'
+import Container from '../UI/Container'
 
 
 class ToDo extends React.Component {
@@ -39,18 +40,19 @@ class ToDo extends React.Component {
 
     render() {
         return (
-            <div>
+            <Container>
                 <Controls
                     onClickHandler={this.addTask}
                     onChangeHandler={this.newTaskChangeHandler}
                     newTaskValue={this.state.newTask}
 
                 />
+
                 <List
                     deleteTaskFunction={this.deleteTask}
                     tasksList={this.state.tasks}
                 />
-            </div>
+            </Container>
         )
     }
 }
