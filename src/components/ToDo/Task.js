@@ -1,10 +1,14 @@
 import React from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
+
 
 
 const Task = ({name, deleteTask}) => (
     <div>
         {name}
-        <button onClick={deleteTask}>X</button>
+        <RaisedButton
+            secondary={true}
+            onClick={deleteTask}>X</RaisedButton>
     </div>
 )
 

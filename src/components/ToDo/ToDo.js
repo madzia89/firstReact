@@ -1,13 +1,16 @@
 import React from 'react'
 import List from './List'
+import Controls from './Controls'
+
 
 class ToDo extends React.Component {
     state = {
         tasks: [
-            {name: 'umyj naczynia', uid: 82664478218},
-            {name: 'biegaj', uid: 82686478218}
+            {name: 'umyj naczynia ', uid: 82664478218},
+            {name: 'biegaj ', uid: 82686478218}
         ],
-        filterText: ''
+        filterText: '',
+        newTask: ''
     }
 
     deleteTask = (taskUid) => {
@@ -17,9 +20,19 @@ class ToDo extends React.Component {
         })
     }
 
+    newTaskChangeHandler = (event, newValue) => {
+        this.setState({
+            newTask: newValue
+        })
+    }
+
     render() {
         return (
             <div>
+                <Controls
+                    onChangeHandler={this.newTaskChangeHandler}
+                    newTaskValue={this.state.newTask}
+                />
                 <List
                     deleteTaskFunction={this.deleteTask}
                     tasksList={this.state.tasks}
