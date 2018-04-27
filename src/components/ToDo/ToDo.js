@@ -37,6 +37,11 @@ class ToDo extends React.Component {
             newTask: newValue
         })
     }
+    newFilterChangeHandler = (event, newValue) => {
+        this.setState({
+            filterText: newValue
+        })
+    }
 
     render() {
         return (
@@ -45,12 +50,15 @@ class ToDo extends React.Component {
                     onClickHandler={this.addTask}
                     onChangeHandler={this.newTaskChangeHandler}
                     newTaskValue={this.state.newTask}
+                    onFilterChangeHandler={this.newFilterChangeHandler}
+                    filtrTaskValue={this.state.filterText}
 
                 />
 
                 <List
                     deleteTaskFunction={this.deleteTask}
                     tasksList={this.state.tasks}
+                    filterName={this.state.filterText}
                 />
             </Container>
         )
